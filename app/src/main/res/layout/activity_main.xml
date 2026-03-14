@@ -47,7 +47,6 @@
             android:layout_marginTop="4dp"
             android:text="Button2"
             app:layout_constraintEnd_toEndOf="@+id/button"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/button"
             app:layout_constraintTop_toBottomOf="@+id/button" />
 
@@ -69,7 +68,6 @@
             android:padding="10dp"
             android:text="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque."
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button2" />
 
@@ -97,25 +95,19 @@
                 android:id="@+id/radioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Option 1"
-                tools:layout_editor_absoluteX="59dp"
-                tools:layout_editor_absoluteY="480dp" />
+                android:text="Option 1" />
 
             <RadioButton
                 android:id="@+id/radioButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Option 2"
-                tools:layout_editor_absoluteX="59dp"
-                tools:layout_editor_absoluteY="480dp" />
+                android:text="Option 2" />
 
             <RadioButton
                 android:id="@+id/radioButton3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Option 3"
-                tools:layout_editor_absoluteX="59dp"
-                tools:layout_editor_absoluteY="480dp" />
+                android:text="Option 3" />
 
         </RadioGroup>
 
