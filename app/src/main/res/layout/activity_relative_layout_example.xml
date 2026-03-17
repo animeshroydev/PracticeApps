@@ -1,53 +1,65 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <!-- TextView at the top center -->
+    <!-- Top Section -->
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
         android:text="Hello Android"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
 
-    <!-- Button below TextView -->
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/title"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Click Me" />
+        android:text="Click Me"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
 
-    <!--    place a button at the center of the screen-->
+    <!-- Center Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Login In" />
+        <!-- Center Button -->
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login In" />
 
-    <TextView
-        android:id="@+id/title2"
+        <!-- Text BELOW Login Button -->
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="RelativeLayout is an Android layout that lets you position UI elements relative to each other or to the parent container. Instead of arranging views in a straight line, you can place them using rules like below another view, to the right of, or center in parent."
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+    <!-- Bottom Right Image -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:layout_below="@+id/button2"
-        android:text="RelativeLayout is an Android layout that lets you position UI elements relative to each other or to the parent container. Instead of arranging views in a straight line, you can place them using rules like below another view, to the right of, or center in parent."
-        android:textSize="20sp" />
+        android:gravity="end">
 
-    <!-- Image aligned at bottom right -->
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="16dp"
-        android:src="@android:drawable/ic_menu_camera" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="16dp"
+            android:src="@android:drawable/ic_menu_camera" />
+    </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>
