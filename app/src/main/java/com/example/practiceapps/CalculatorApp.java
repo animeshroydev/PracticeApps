@@ -16,7 +16,7 @@ public class CalculatorApp extends AppCompatActivity {
 
     double firstNum = 0;
     String operator = "";
-    boolean isOperatorClicked = false;
+
 
     private EditText editTxtInput;
     private Button acBtn, modBtn, delBtn, divBtn, btn7, btn8, btn9,
@@ -32,6 +32,9 @@ public class CalculatorApp extends AppCompatActivity {
 
         setContentView(R.layout.activity_calculator_app);
 
+        btnMulti = findViewById(R.id.btnMulti);
+        divBtn = findViewById(R.id.divBtn);
+        btnMinus = findViewById(R.id.btnMinus);
         acBtn = findViewById(R.id.acBtn);
         btnEqual = findViewById(R.id.btnEqual);
         btnPlus = findViewById(R.id.btnPlus);
@@ -187,6 +190,9 @@ public class CalculatorApp extends AppCompatActivity {
                         case "*":
                             result = firstNum * secondNum;
                             break;
+                        case "%":
+                            result = firstNum % secondNum;
+                            break;
                         case "/":
                             if (secondNum != 0) {
                                 result = firstNum / secondNum;
@@ -200,7 +206,7 @@ public class CalculatorApp extends AppCompatActivity {
 
                     // Reset state
                     operator = "";
-                    isOperatorClicked = false;
+
                     firstNum = 0;
                 }
             }
@@ -217,13 +223,71 @@ public class CalculatorApp extends AppCompatActivity {
                 if (!value.isEmpty()) {
                     firstNum = Double.parseDouble(value);
                     operator = "+";
-                    isOperatorClicked = true;
+
                     editTxtInput.setText("");
                 }
 
             }
         });
 
+        btnMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String value = editTxtInput.getText().toString();
+
+                if (!value.isEmpty()) {
+                    firstNum = Double.parseDouble(value);
+                    operator = "-";
+
+                    editTxtInput.setText("");
+                }
+            }
+        });
+
+
+        btnMulti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String value = editTxtInput.getText().toString();
+
+                if (!value.isEmpty()) {
+                    firstNum = Double.parseDouble(value);
+                    operator = "*";
+
+                    editTxtInput.setText("");
+                }
+            }
+        });
+
+        divBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String value = editTxtInput.getText().toString();
+
+                if (!value.isEmpty()) {
+                    firstNum = Double.parseDouble(value);
+                    operator = "/";
+
+                    editTxtInput.setText("");
+                }
+
+            }
+        });
+
+        modBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String value = editTxtInput.getText().toString();
+
+                if (!value.isEmpty()) {
+                    firstNum = Double.parseDouble(value);
+                    operator = "%";
+                    editTxtInput.setText("");
+                }
+            }
+        });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
