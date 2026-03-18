@@ -20,7 +20,8 @@
         android:background="@android:color/transparent"
         android:textColorHint="@color/black"
         android:layout_margin="20dp"
-        android:inputType="number"
+        android:focusable="false"
+        android:cursorVisible="false"
         android:textSize="30sp"
         android:textAlignment="textEnd"
         app:layout_constraintEnd_toEndOf="parent" />
