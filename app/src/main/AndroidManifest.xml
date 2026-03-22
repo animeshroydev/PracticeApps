@@ -12,16 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticeApps">
         <activity
-            android:name=".RelativeLayoutExample"
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".RelativeLayoutExample"
             android:exported="false" />
         <activity
             android:name=".CalculatorApp"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity2"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
